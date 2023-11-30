@@ -12,26 +12,22 @@ public class removeAtIndex {
     private static int[ ] remove(int[ ] array, int index)
     {
         int[ ] tempArray = new int[array.length - 1];
-        boolean hasOccured = false;
+        //boolean hasOccured = false;
 
+             for(int i = 0; i < array.length; i++)
+             {
+                 if (i > index)
+                {
+                 tempArray[i-1] = array[i];
+                 System.out.println(array[i]);
+                }
 
-         for(int i = 0; i <= tempArray.length; i++)
-         {
-            if (i == index)
-            {
-                hasOccured = true;
-
-            } else if (hasOccured == true)
-            {
-                tempArray[i-1] = array[i];
-                System.out.println(array[i]);
-            } else
-            {
-                tempArray[i] = array[i];
-                System.out.println(array[i]);
-            }
+             else
+             {
+                 tempArray[i] = array[i];
+                 System.out.println(array[i]);
+             }
          }
-
 
         return tempArray;
     }
